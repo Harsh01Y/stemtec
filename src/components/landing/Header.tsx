@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -37,7 +36,7 @@ const Header = () => {
       }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className={`text-2xl font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-primary drop-shadow'}`}>
+        <a href="#home" className={`text-2xl font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-foreground drop-shadow'}`}>
           STEMTEC
         </a>
         <nav className="hidden md:flex items-center space-x-6">
@@ -45,7 +44,7 @@ const Header = () => {
             <a
               key={link.title}
               href={link.href}
-              className={`hover:text-primary transition-colors font-medium tracking-wide ${scrolled ? 'text-slate-800' : 'text-foreground/90'}`}
+              className={`hover:text-primary transition-colors font-medium tracking-wide ${scrolled ? 'text-slate-800' : 'text-foreground'}`}
               style={{ textShadow: !scrolled ? "0 1px 8px rgba(0,0,0,0.20)" : undefined }}
             >
               {link.title}
