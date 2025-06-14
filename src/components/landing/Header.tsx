@@ -1,12 +1,14 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { title: 'Services', href: '#services' },
-  { title: 'Products', href: '#products' },
-  { title: 'About', href: '#about' },
-  { title: 'Contact', href: '#contact' },
+  { title: 'Services', href: '/#services' },
+  { title: 'Products', href: '/#products' },
+  { title: 'About', href: '/#about' },
+  { title: 'Team', href: '/team' },
+  { title: 'Contact', href: '/contact' },
 ];
 
 const Header = () => {
@@ -35,7 +37,7 @@ const Header = () => {
       }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className={`text-2xl font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-white drop-shadow'}`}>
+        <a href="/" className={`text-2xl font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-white drop-shadow'}`}>
           STEMTEC
         </a>
         <nav className="hidden md:flex items-center space-x-6">
