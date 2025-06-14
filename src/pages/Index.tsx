@@ -1,6 +1,7 @@
 
 import Header from '@/components/landing/Header';
 import Hero from '@/components/landing/Hero';
+import { LogoScroller, DUMMY_CUSTOMERS, DUMMY_PARTNERS } from '@/components/landing/LogoScroller';
 import Services from '@/components/landing/Services';
 import Products from '@/components/landing/Products';
 import About from '@/components/landing/About';
@@ -14,6 +15,8 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <LogoScroller title="Trusted by Industry Leaders" logos={DUMMY_CUSTOMERS} direction="left" />
+        <LogoScroller title="Our Valued Partners" logos={DUMMY_PARTNERS} direction="right" />
         <Services />
         <Products />
         <About />
