@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -28,12 +27,12 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? 'py-4 bg-background/80 backdrop-blur-lg border-b border-border'
-          : 'py-6 bg-gradient-to-b from-black/80 via-blue-900/60 to-transparent backdrop-blur-md border-b border-transparent'
+          : 'py-6 bg-gradient-to-b from-black/40 to-transparent'
       }`}
       style={{
         boxShadow: scrolled
           ? '0 2px 12px 0 rgba(20,25,40,0.07)'
-          : '0 2px 24px 0 rgba(14,25,49,0.14)',
+          : 'none',
       }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -95,4 +94,3 @@ const Header = () => {
 };
 
 export default Header;
-
