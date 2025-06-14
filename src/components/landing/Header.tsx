@@ -53,7 +53,15 @@ const Header = () => {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button className={scrolled ? 'bg-white text-black hover:bg-gray-100' : ''}>{'Get a Quote'}</Button>
+          <Button
+            className={
+              scrolled
+                ? 'border border-slate-300 bg-white text-black hover:bg-gray-100'
+                : 'border border-white bg-transparent text-white hover:bg-white hover:text-black'
+            }
+          >
+            {'Get a Quote'}
+          </Button>
         </div>
         <div className="md:hidden">
           <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
