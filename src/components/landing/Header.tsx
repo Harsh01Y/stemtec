@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -36,7 +37,7 @@ const Header = () => {
       }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className={`text-2xl font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-foreground drop-shadow'}`}>
+        <a href="#home" className={`text-2xl font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-white drop-shadow'}`}>
           STEMTEC
         </a>
         <nav className="hidden md:flex items-center space-x-6">
@@ -44,7 +45,7 @@ const Header = () => {
             <a
               key={link.title}
               href={link.href}
-              className={`hover:text-primary transition-colors font-medium tracking-wide ${scrolled ? 'text-slate-800' : 'text-foreground'}`}
+              className={`hover:text-primary transition-colors font-medium tracking-wide ${scrolled ? 'text-slate-800' : 'text-white'}`}
               style={{ textShadow: !scrolled ? "0 1px 8px rgba(0,0,0,0.20)" : undefined }}
             >
               {link.title}
@@ -56,7 +57,7 @@ const Header = () => {
         </div>
         <div className="md:hidden">
           <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
-            <Menu className={`h-6 w-6 transition-colors ${scrolled ? 'text-slate-900' : 'text-foreground'}`} />
+            <Menu className={`h-6 w-6 transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`} />
           </Button>
         </div>
       </div>
