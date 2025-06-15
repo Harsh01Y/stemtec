@@ -1,4 +1,5 @@
 
+```tsx
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -25,6 +26,17 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header
@@ -76,7 +88,7 @@ const Header = () => {
       </div>
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black/80 backdrop-blur-xl z-[100] transform ${
+        className={`fixed inset-0 bg-black z-[100] transform ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-300 ease-in-out md:hidden`}
       >
@@ -109,3 +121,4 @@ const Header = () => {
 };
 
 export default Header;
+```
