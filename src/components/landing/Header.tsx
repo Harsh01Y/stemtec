@@ -41,7 +41,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/">
-          <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-12" />
+          <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-16" />
         </a>
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
@@ -76,14 +76,13 @@ const Header = () => {
       </div>
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-background/95 z-[100] transform ${
+        className={`fixed inset-0 bg-black/80 backdrop-blur-xl z-[100] transform ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-300 ease-in-out md:hidden`}
-        style={{ backdropFilter: 'blur(12px)' }}
       >
         <div className="flex justify-end p-4">
           <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
-            <X className="h-6 w-6" />
+            <X className="h-6 w-6 text-white" />
           </Button>
         </div>
         <nav className="flex flex-col items-center justify-center h-full -mt-16 space-y-8">
@@ -91,7 +90,7 @@ const Header = () => {
             <a
               key={link.title}
               href={link.href}
-              className="text-2xl text-foreground hover:text-primary transition-colors font-semibold"
+              className="text-2xl text-white hover:text-primary transition-colors font-semibold"
               onClick={() => setMobileMenuOpen(false)}
               style={{ textShadow: "0 1px 8px rgba(0,0,0,0.20)" }}
             >
