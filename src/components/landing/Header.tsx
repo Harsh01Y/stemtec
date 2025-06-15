@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -37,53 +38,55 @@ const Header = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? 'py-4 bg-white/95 backdrop-blur-lg border-b border-gray-200'
-          : 'py-6 bg-gradient-to-b from-black/40 to-transparent'
-      }`}
-      style={{
-        boxShadow: scrolled
-          ? '0 2px 12px 0 rgba(20,25,40,0.07)'
-          : 'none',
-      }}
-    >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="/">
-          <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-16" />
-        </a>
-        <nav className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.title}
-              href={link.href}
-              className={`hover:text-primary transition-colors font-medium tracking-wide ${scrolled ? 'text-slate-800' : 'text-white'}`}
-              style={{ textShadow: !scrolled ? "0 1px 8px rgba(0,0,0,0.20)" : undefined }}
-            >
-              {link.title}
-            </a>
-          ))}
-        </nav>
-        <div className="hidden md:block">
-          <Link to="/contact">
-            <Button
-              className={
-                scrolled
-                  ? 'border border-slate-300 bg-white text-black hover:bg-gray-100'
-                  : 'border border-white bg-transparent text-white hover:bg-white hover:text-black'
-              }
-            >
-              {t('header.contact_us')}
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? 'py-4 bg-white/95 backdrop-blur-lg border-b border-gray-200'
+            : 'py-6 bg-gradient-to-b from-black/40 to-transparent'
+        }`}
+        style={{
+          boxShadow: scrolled
+            ? '0 2px 12px 0 rgba(20,25,40,0.07)'
+            : 'none',
+        }}
+      >
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <a href="/">
+            <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-16" />
+          </a>
+          <nav className="hidden md:flex items-center space-x-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.title}
+                href={link.href}
+                className={`hover:text-primary transition-colors font-medium tracking-wide ${scrolled ? 'text-slate-800' : 'text-white'}`}
+                style={{ textShadow: !scrolled ? "0 1px 8px rgba(0,0,0,0.20)" : undefined }}
+              >
+                {link.title}
+              </a>
+            ))}
+          </nav>
+          <div className="hidden md:block">
+            <Link to="/contact">
+              <Button
+                className={
+                  scrolled
+                    ? 'border border-slate-300 bg-white text-black hover:bg-gray-100'
+                    : 'border border-white bg-transparent text-white hover:bg-white hover:text-black'
+                }
+              >
+                {t('header.contact_us')}
+              </Button>
+            </Link>
+          </div>
+          <div className="md:hidden">
+            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
+              <Menu className={`h-6 w-6 transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`} />
             </Button>
-          </Link>
+          </div>
         </div>
-        <div className="md:hidden">
-          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
-            <Menu className={`h-6 w-6 transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`} />
-          </Button>
-        </div>
-      </div>
+      </header>
       {/* Mobile Menu */}
       <div
         className={`fixed inset-0 bg-black z-[100] transform ${
@@ -114,7 +117,7 @@ const Header = () => {
           </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 };
 
