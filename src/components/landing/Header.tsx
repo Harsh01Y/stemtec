@@ -87,7 +87,7 @@ const Header = () => {
       </div>
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black z-[100] transform ${
+        className={`fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] transform ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-300 ease-in-out md:hidden`}
       >
