@@ -1,5 +1,4 @@
 
-```tsx
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -121,4 +120,3 @@ const Header = () => {
 };
 
 export default Header;
-```
