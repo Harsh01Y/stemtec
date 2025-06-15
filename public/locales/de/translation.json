@@ -1,0 +1,26 @@
+
+{
+  "header": {
+    "services": "Dienstleistungen",
+    "products": "Produkte",
+    "about": "Über uns",
+    "team": "Team",
+    "contact": "Kontakt",
+    "get_a_quote": "Angebot einholen"
+  },
+  "footer": {
+    "slogan": "Die Zukunft von KI und Robotik gestalten.",
+    "quick_links": "Schnelllinks",
+    "services": "Dienstleistungen",
+    "products": "Produkte",
+    "about_us": "Über uns",
+    "contact": "Kontakt",
+    "company": "Firma",
+    "team": "Team",
+    "career": "Karriere",
+    "privacy_policy": "Datenschutz-Bestimmungen",
+    "contact_us": "Kontaktiere uns",
+    "language": "Sprache",
+    "copyright": "© {{year}} STEMTEC AI & Robotics. Alle Rechte vorbehalten."
+  }
+}

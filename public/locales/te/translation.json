@@ -1,0 +1,26 @@
+
+{
+  "header": {
+    "services": "సేవలు",
+    "products": "ఉత్పత్తులు",
+    "about": "గురించి",
+    "team": "జట్టు",
+    "contact": "సంప్రదించండి",
+    "get_a_quote": "ఒక కొటేషన్ పొందండి"
+  },
+  "footer": {
+    "slogan": "AI మరియు రోబోటిక్స్ యొక్క భవిష్యత్తును ఇంజనీరింగ్ చేయడం.",
+    "quick_links": "త్వరిత కೊಂಡಿಗಳು",
+    "services": "సేవలు",
+    "products": "ఉత్పత్తులు",
+    "about_us": "మా గురించి",
+    "contact": "సంప్రదించండి",
+    "company": "కంపెనీ",
+    "team": "జట్టు",
+    "career": "కెరీర్",
+    "privacy_policy": "గోప్యతా విధానం",
+    "contact_us": "మమ్మల్ని సంప్రదించండి",
+    "language": "భాష",
+    "copyright": "© {{year}} STEMTEC AI & Robotics. అన్ని హక్కులు ప్రత్యేకించబడ్డాయి."
+  }
+}

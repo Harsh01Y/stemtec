@@ -1,19 +1,20 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-
-const navLinks = [
-  { title: 'Services', href: '/#services' },
-  { title: 'Products', href: '/#products' },
-  { title: 'About', href: '/#about' },
-  { title: 'Team', href: '/team' },
-  { title: 'Contact', href: '/contact' },
-];
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { title: t('header.services'), href: '/#services' },
+    { title: t('header.products'), href: '/#products' },
+    { title: t('header.about'), href: '/#about' },
+    { title: t('header.team'), href: '/team' },
+    { title: t('header.contact'), href: '/contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,7 +61,7 @@ const Header = () => {
                 : 'border border-white bg-transparent text-white hover:bg-white hover:text-black'
             }
           >
-            {'Get a Quote'}
+            {t('header.get_a_quote')}
           </Button>
         </div>
         <div className="md:hidden">
@@ -94,7 +95,7 @@ const Header = () => {
             </a>
           ))}
           <Button size="lg" className="mt-8">
-            {'Get a Quote'}
+            {t('header.get_a_quote')}
           </Button>
         </nav>
       </div>

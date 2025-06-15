@@ -1,0 +1,26 @@
+
+{
+  "header": {
+    "services": "सेवाएं",
+    "products": "उत्पाद",
+    "about": "हमारे बारे में",
+    "team": "टीम",
+    "contact": "संपर्क",
+    "get_a_quote": "एक उद्धरण प्राप्त करें"
+  },
+  "footer": {
+    "slogan": "एआई और रोबोटिक्स के भविष्य की इंजीनियरिंग।",
+    "quick_links": "त्वरित सम्पक",
+    "services": "सेवाएं",
+    "products": "उत्पाद",
+    "about_us": "हमारे बारे में",
+    "contact": "संपर्क",
+    "company": "कंपनी",
+    "team": "टीम",
+    "career": "व्यवसाय",
+    "privacy_policy": "गोपनीयता नीति",
+    "contact_us": "हमसे संपर्क करें",
+    "language": "भाषा",
+    "copyright": "© {{year}} STEMTEC AI & Robotics. सर्वाधिकार सुरक्षित।"
+  }
+}
