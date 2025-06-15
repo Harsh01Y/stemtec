@@ -65,7 +65,7 @@ const Footer = () => {
               <SelectTrigger className="w-full max-w-[150px] mx-auto sm:mx-0">
                 <SelectValue placeholder={t('footer.language')} />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="max-h-48">
                 {languages.map(lang => (
                   <SelectItem key={lang.code} value={lang.code}>{lang.name}</SelectItem>
                 ))}
