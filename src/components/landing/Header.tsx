@@ -1,7 +1,9 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -13,7 +15,7 @@ const Header = () => {
     { title: t('header.products'), href: '/#products' },
     { title: t('header.about'), href: '/#about' },
     { title: t('header.team'), href: '/team' },
-    { title: t('header.contact'), href: '/contact' },
+    { title: t('header.blog'), href: '/blog' },
   ];
 
   useEffect(() => {
@@ -54,15 +56,17 @@ const Header = () => {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button
-            className={
-              scrolled
-                ? 'border border-slate-300 bg-white text-black hover:bg-gray-100'
-                : 'border border-white bg-transparent text-white hover:bg-white hover:text-black'
-            }
-          >
-            {t('header.get_a_quote')}
-          </Button>
+          <Link to="/contact">
+            <Button
+              className={
+                scrolled
+                  ? 'border border-slate-300 bg-white text-black hover:bg-gray-100'
+                  : 'border border-white bg-transparent text-white hover:bg-white hover:text-black'
+              }
+            >
+              {t('header.contact_us')}
+            </Button>
+          </Link>
         </div>
         <div className="md:hidden">
           <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(true)}>
@@ -94,9 +98,11 @@ const Header = () => {
               {link.title}
             </a>
           ))}
-          <Button size="lg" className="mt-8">
-            {t('header.get_a_quote')}
-          </Button>
+          <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+            <Button size="lg" className="mt-8">
+              {t('header.contact_us')}
+            </Button>
+          </Link>
         </nav>
       </div>
     </header>

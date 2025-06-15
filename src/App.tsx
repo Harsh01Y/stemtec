@@ -13,6 +13,8 @@ import ContactPage from "./pages/ContactPage";
 import TeamPage from "./pages/TeamPage";
 import "./i18n";
 import React from "react";
+import Loading from "./components/layout/Loading";
+import BlogPage from "./pages/BlogPage";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <React.Suspense fallback="Loading...">
+        <React.Suspense fallback={<Loading />}>
           <MainLayout>
             <Routes>
               <Route path="/" element={<Index />} />
@@ -30,6 +32,7 @@ const App = () => (
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/team" element={<TeamPage />} />
+              <Route path="/blog" element={<BlogPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

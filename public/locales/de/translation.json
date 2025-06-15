@@ -5,8 +5,8 @@
     "products": "Produkte",
     "about": "Über uns",
     "team": "Team",
-    "contact": "Kontakt",
-    "get_a_quote": "Angebot einholen"
+    "blog": "Blog",
+    "contact_us": "Kontaktiere uns"
   },
   "footer": {
     "slogan": "Die Zukunft von KI und Robotik gestalten.",
@@ -15,6 +15,7 @@
     "products": "Produkte",
     "about_us": "Über uns",
     "contact": "Kontakt",
+    "blog": "Blog",
     "company": "Firma",
     "team": "Team",
     "career": "Karriere",

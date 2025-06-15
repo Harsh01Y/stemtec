@@ -5,8 +5,8 @@
     "products": "Products",
     "about": "About",
     "team": "Team",
-    "contact": "Contact",
-    "get_a_quote": "Get a Quote"
+    "blog": "Blog",
+    "contact_us": "Contact Us"
   },
   "footer": {
     "slogan": "Engineering the future of AI and Robotics.",
@@ -15,6 +15,7 @@
     "products": "Products",
     "about_us": "About Us",
     "contact": "Contact",
+    "blog": "Blog",
     "company": "Company",
     "team": "Team",
     "career": "Career",
