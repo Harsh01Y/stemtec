@@ -37,8 +37,8 @@ const Header = () => {
       }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="/" className={`text-2xl font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-white drop-shadow'}`}>
-          STEMTEC
+        <a href="/">
+          <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-10" />
         </a>
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (

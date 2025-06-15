@@ -16,8 +16,10 @@ const Footer = () => {
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center sm:text-left">
           <div className="sm:col-span-2 md:col-span-1">
-            <h3 className="text-2xl font-bold text-primary">STEMTEC</h3>
-            <p className="mt-2 text-muted-foreground">
+            <a href="/" className="inline-block">
+              <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-12 mx-auto sm:mx-0" />
+            </a>
+            <p className="mt-4 text-muted-foreground">
               Engineering the future of AI and Robotics.
             </p>
           </div>
@@ -61,11 +63,11 @@ const Footer = () => {
           <p className="text-muted-foreground text-center md:text-left">
             &copy; {year} STEMTEC AI & Robotics. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin /></a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook /></a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Instagram /></a>
+          <div className="flex space-x-2">
+            <a href="#" className="p-2 text-muted-foreground rounded-full hover:bg-primary/10 hover:text-primary transition-colors"><Twitter size={20} /></a>
+            <a href="#" className="p-2 text-muted-foreground rounded-full hover:bg-primary/10 hover:text-primary transition-colors"><Linkedin size={20} /></a>
+            <a href="#" className="p-2 text-muted-foreground rounded-full hover:bg-primary/10 hover:text-primary transition-colors"><Facebook size={20} /></a>
+            <a href="#" className="p-2 text-muted-foreground rounded-full hover:bg-primary/10 hover:text-primary transition-colors"><Instagram size={20} /></a>
           </div>
         </div>
       </div>
