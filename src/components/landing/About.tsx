@@ -1,4 +1,3 @@
-
 import Section from './Section';
 import { motion } from 'framer-motion';
 
@@ -13,9 +12,9 @@ const About = () => {
             transition={{ duration: 0.6 }}
         >
           <img 
-            src="https://images.unsplash.com/photo-1527576539890-dfa815648363?q=80&w=1887&auto=format&fit=crop"
-            alt="Modern building architecture"
-            className="rounded-lg shadow-2xl"
+            src="/lovable-uploads/STEMTEC.png"
+            alt="STEMTEC Company"
+            className="rounded-lg shadow-2xl w-full h-auto object-cover"
           />
         </motion.div>
         <motion.div

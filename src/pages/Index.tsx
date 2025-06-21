@@ -1,6 +1,8 @@
+'use client';
 
+import * as React from 'react';
 import Hero from '@/components/landing/Hero';
-import { LogoScroller, DUMMY_CUSTOMERS, DUMMY_PARTNERS } from '@/components/landing/LogoScroller';
+import { LogoScroller, TECH_STACK, PARTNERS } from '@/components/landing/LogoScroller';
 import Services from '@/components/landing/Services';
 import Products from '@/components/landing/Products';
 import About from '@/components/landing/About';
@@ -11,8 +13,8 @@ const Index = () => {
   return (
     <>
       <Hero />
-      <LogoScroller title="Trusted by Industry Leaders" logos={DUMMY_CUSTOMERS} direction="left" />
-      <LogoScroller title="Our Valued Partners" logos={DUMMY_PARTNERS} direction="right" />
+      <LogoScroller title="Our Technology Backbone" logos={TECH_STACK} direction="left" />
+      <LogoScroller title="Engineered with" logos={PARTNERS} direction="right" isStatic={true} />
       <Services />
       <Products />
       <About />

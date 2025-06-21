@@ -1,3 +1,5 @@
+'use client';
+
 import { Twitter, Linkedin, Facebook, Instagram } from 'lucide-react';
 import {
   Select,
@@ -29,9 +31,10 @@ const Footer = () => {
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center sm:text-left">
           <div className="sm:col-span-2 md:col-span-1">
-            <a href="/" className="inline-block">
-              <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-12 mx-auto sm:mx-0" />
-            </a>
+            <div className="flex items-center gap-4 justify-center sm:justify-start">
+              <img src="/lovable-uploads/88b53153-b805-491e-8d72-6d3f2dd10272.png" alt="STEMTEC Logo" className="h-12" />
+              <span className="font-['Futurism'] text-2xl text-blue-400">STEMTEC</span>
+            </div>
             <p className="mt-4 text-muted-foreground">
               {t('footer.slogan')}
             </p>
@@ -44,7 +47,6 @@ const Footer = () => {
               <li><a href="/#products" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.products')}</a></li>
               <li><a href="/#about" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.about_us')}</a></li>
               <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.blog')}</Link></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.contact')}</Link></li>
             </ul>
           </div>
           
@@ -55,6 +57,20 @@ const Footer = () => {
               <li><Link to="/career" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.career')}</Link></li>
               <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.privacy_policy')}</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.contact_us')}</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-foreground mb-4">Contact</h4>
+            <ul className="space-y-2">
+              <li className="text-muted-foreground">
+                V-Nest, Academic Block - 3,<br/>
+                Kelambakkam - Vandalur Rd,<br/>
+                Rajan Nagar, Chennai,<br/>
+                Tamil Nadu 600127
+              </li>
+              <li><a href="tel:+918825022160" className="text-muted-foreground hover:text-primary transition-colors">+91 88250 22160</a></li>
+              <li><a href="mailto:admin@stemtec.in" className="text-muted-foreground hover:text-primary transition-colors">admin@stemtec.in</a></li>
             </ul>
           </div>
 
@@ -73,11 +89,11 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-border/50">
           <p className="text-muted-foreground text-center md:text-left">
-            {t('footer.copyright', { year })}
+            © {year} STEMTEC AI & Robotics Private Limited. All rights reserved.
           </p>
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 mt-4 sm:mt-0">
             <a href="#" className="p-2 text-muted-foreground rounded-full hover:bg-primary/10 hover:text-primary transition-colors"><Twitter size={20} /></a>
             <a href="#" className="p-2 text-muted-foreground rounded-full hover:bg-primary/10 hover:text-primary transition-colors"><Linkedin size={20} /></a>
             <a href="#" className="p-2 text-muted-foreground rounded-full hover:bg-primary/10 hover:text-primary transition-colors"><Facebook size={20} /></a>

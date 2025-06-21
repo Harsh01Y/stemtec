@@ -1,3 +1,28 @@
+# StemTec AI and Robotics
+
+This project and all associated logos, content, and intellectual property are owned by **Stemtec AI and Robotics Pvt. Ltd.**. All rights reserved.
+
+## About
+
+StemTec is a cutting-edge platform developed for Stemtec AI and Robotics Pvt. Ltd., showcasing their innovative products and services in the field of robotics and artificial intelligence.
+
+## Creators
+
+This project was developed by:
+- Harsh Yadav
+- Avishkar Jaiswal
+- Reeshav Raj
+
+## Copyright
+
+© 2024 Stemtec AI and Robotics Pvt. Ltd. All rights reserved.
+
+All content, including but not limited to logos, images, text, and code within this project are the exclusive property of Stemtec AI and Robotics Pvt. Ltd. and may not be used, reproduced, or distributed without explicit written permission.
+
+## Contact
+
+For any inquiries, please contact Stemtec AI and Robotics Pvt. Ltd.
+
 # Welcome to your Lovable project
 
 ## Project info

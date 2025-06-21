@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
 
 export default {
 	darkMode: ["class"],
@@ -19,8 +21,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-      },
+				sans: ["var(--font-sans)", ...fontFamily.sans],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -88,27 +90,93 @@ export default {
 						height: '0'
 					}
 				},
-        'scroll-left': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        'scroll-right': {
-          '0%': { transform: 'translateX(-50%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
-        'wave': {
-          '0%': { transform: 'scale(0.5)', opacity: '1' },
-          '100%': { transform: 'scale(2.5)', opacity: '0' },
-        },
+				'scroll-left': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' },
+				},
+				'scroll-right': {
+					'0%': { transform: 'translateX(-50%)' },
+					'100%': { transform: 'translateX(0)' },
+				},
+				'wave': {
+					'0%': { transform: 'scale(1)', opacity: '0.8' },
+					'100%': { transform: 'scale(1.5)', opacity: '0' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-        'scroll-left': 'scroll-left 40s linear infinite',
-        'scroll-right': 'scroll-right 40s linear infinite',
-        'wave': 'wave 2s cubic-bezier(0, 0, 0.2, 1) infinite',
-			}
+				'scroll-left': 'scroll-left 40s linear infinite',
+				'scroll-right': 'scroll-right 40s linear infinite',
+				'wave': 'wave 2s linear infinite',
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100%',
+						color: 'hsl(var(--foreground))',
+						h1: {
+							color: 'hsl(var(--foreground))',
+						},
+						h2: {
+							color: 'hsl(var(--foreground))',
+							marginTop: '2em',
+						},
+						h3: {
+							color: 'hsl(var(--foreground))',
+							marginTop: '1.5em',
+						},
+						h4: {
+							color: 'hsl(var(--foreground))',
+						},
+						p: {
+							color: 'hsl(var(--muted-foreground))',
+							lineHeight: '1.75',
+						},
+						li: {
+							color: 'hsl(var(--muted-foreground))',
+						},
+						strong: {
+							color: 'hsl(var(--foreground))',
+						},
+						blockquote: {
+							color: 'hsl(var(--muted-foreground))',
+							borderLeftColor: 'hsl(var(--border))',
+						},
+						'code::before': {
+							content: '""',
+						},
+						'code::after': {
+							content: '""',
+						},
+						code: {
+							color: 'hsl(var(--foreground))',
+							backgroundColor: 'hsl(var(--accent))',
+							padding: '0.25rem 0.4rem',
+							borderRadius: '0.25rem',
+							fontWeight: '400',
+						},
+						pre: {
+							backgroundColor: 'hsl(var(--accent))',
+							code: {
+								backgroundColor: 'transparent',
+								padding: '0',
+							},
+						},
+						a: {
+							color: 'hsl(var(--primary))',
+							'&:hover': {
+								color: 'hsl(var(--primary))',
+								textDecoration: 'underline',
+							},
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require('@tailwindcss/typography'),
+	],
 } satisfies Config;
